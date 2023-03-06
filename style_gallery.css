@@ -288,3 +288,30 @@ footer p, footer address, footer address a {
       background-color: #aed;
     }
 }
+
+@media screen and (max-width: 420px) {
+  .grid {
+    margin-top: 0.7rem;
+    margin-left: 0;
+    grid-template-columns: 1fr;
+    grid-gap: 14px;
+  }
+
+  main {
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+  }
+  
+  #view {
+    margin-left: 0.3rem;
+  }
+
+  #logo_name2 {
+    padding-left: 0.8rem;
+  }
+
+  #logo_name3 {
+    padding-left: 0.8rem;
+  }
+
+}
