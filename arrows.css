@@ -1,0 +1,58 @@
+#rightArrow, #leftArrow {
+    width: 180px;
+    height: 360px;
+    position: fixed;
+    top: calc(50vh - 190px);
+    z-index: 10;
+    display: flex;
+    padding: 0.8rem;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0.033;
+}
+
+#rightArrow {
+    right: 0;
+    background: radial-gradient(ellipse farthest-corner at 89% 50%, rgba(255, 255, 255, 0.8) 1%, rgba(255, 255, 255, 0) 35%);
+    align-items: flex-end;
+
+}
+
+#leftArrow {
+    left: 0;
+    background: radial-gradient(ellipse farthest-corner at 11% 50%, rgba(255, 255, 255, 0.8) 1%, rgba(255, 255, 255, 0) 35%);
+    align-items: flex-start;
+
+}
+
+#rightArrow:hover, #leftArrow:hover {
+    opacity: 0.94;
+}
+
+.arrow {
+    width: 50px
+}
+
+
+.arrowSVG {
+    fill: none;
+    stroke: rgb(52, 33, 94);
+    stroke-width: 10;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+    /* filter: drop-shadow(2px 2px 20px rgba(255, 255, 255, 0.9)); */
+}
+
+@media screen and (max-width: 800px) {
+    .arrow {
+        width: calc(3.5vw + 20px);
+    }
+    #rightArrow, #leftArrow {
+        width: calc(8vw + 90px);
+        height: calc(16vw + 180px);
+        top: calc(50vh - 9vw - 96px);
+
+    }
+    
+}

@@ -105,6 +105,7 @@ nav a {
 
 .logotype:hover {
     color: var(--logoHover);
+    cursor: pointer;
 }
 
 .navItem {
@@ -113,6 +114,7 @@ nav a {
 
 .navItem:hover {
     color: var(--navHover);
+    cursor: pointer;
 }
 
 .double {

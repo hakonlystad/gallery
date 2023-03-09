@@ -46,33 +46,77 @@ const showFact = () => {
         fact[i].style.display = "block";
     }
 }
-/* ––– HANDLE NAV CLICKS ––– */
-const handleViewBooks = () => {
+
+/* ––– VIEWS ––– */
+
+const viewingBooks = () => {
     hideScifi();
     hideFact();
     showBooks();
     view.innerText = "VIEWING BOOKS & COVERS";
 }
 
-const handleViewScifi = () => {
+const viewingScifi = () => {
     hideBooks();
     hideFact();
     showScifi();
     view.innerText = "VIEWING SCI-FI & FANTASY PROJECTS";
 }
 
-const handleViewFact = () => {
+const viewingFact = () => {
     hideBooks();
     hideScifi();
     showFact();
     view.innerText = "VIEWING HISTORY & NATURE PROJECTS";
 }
 
-const handleClickLogoName = () => {
+const viewingAll = () => {
     showBooks();
     showScifi();
     showFact();
     view.innerText = "VIEWING ALL PROJECTS";
+}
+
+
+
+function checkView() {
+    let viewing = sessionStorage.getItem("viewing");
+    if (viewing == "scifi") {
+        viewingScifi(); 
+    }
+    else if (viewing == "books") {
+        viewingBooks();
+    }
+    else if (viewing == "fact") {
+        viewingFact();
+    }
+    else if (viewing == "all") {
+        viewingAll();
+    }
+    else if (viewing == null) {
+        viewingAll();
+    }
+}
+
+/* ––– HANDLE NAV CLICKS ––– */
+const handleViewBooks = () => {
+    viewingBooks();
+    sessionStorage.setItem("viewing", "books");
+}
+
+const handleViewScifi = () => {
+    viewingScifi();
+    sessionStorage.setItem("viewing", "scifi");
+}
+
+const handleViewFact = () => {
+    viewingFact();
+    sessionStorage.setItem("viewing", "fact");
+}
+
+const handleClickLogoName = () => {
+    viewingAll();
+    sessionStorage.setItem("viewing", "all");
 }
 
 
